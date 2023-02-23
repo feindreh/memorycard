@@ -16,9 +16,9 @@ function App() {
   const [leftCards,setLeftCards] = useState([...cards])
   //Karten die zum spielen sind (und geshuffelt werden)
   const [activeCards,setActiveCards] = useState([...cards])
-
+  //score
   const [score,setScore] = useState(0)
-  const [highScore,setHighScore] = useState(0)
+
   
   useEffect(()=>{
     //check for gameover
@@ -34,7 +34,6 @@ function App() {
     for(let i = 0;i<relative.length;i++){
       if(relative[i].name === name){
         setScore(score+1) 
-        if(highScore <= score){setHighScore(score+1)}
         setLeftCards(leftCards.filter(card => card.name !== name))
         return
       }
@@ -48,7 +47,7 @@ function App() {
 
   return (
   <div>
-      <Header score={score} highScore={highScore}/>
+      <Header score={score}/>
       <Memory cards={activeCards} cp={pickCard}/>
   </div>
   );

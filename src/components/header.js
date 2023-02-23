@@ -7,7 +7,6 @@ function Header(props){
         <div id="header">
             <div>Header</div>
             <div>Score:{score}</div>
-            <div>High-Score:{highScore}</div>
         </div>
     )
 }
