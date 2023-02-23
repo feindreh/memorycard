@@ -66,6 +66,7 @@ function App() {
       }
     }
     setScore(0)
+    setWin(false)
     setLeftCards([...cards])
   }
 
@@ -79,8 +80,10 @@ function App() {
   return (
   <div id="App">
       <Header score={score} scoreMax={cards.length}/>
-      {win?(<button onClick={()=>{setStage(stage + 1);setWin(false)}}>Next Stage</button>):undefined}
+      
       <Memory cards={activeCards} cp={pickCard}/>
+
+      {win?(<button onClick={()=>{setStage(stage + 1);setWin(false)}}>Next Stage</button>):undefined}
       
   </div>
   );
