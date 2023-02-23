@@ -1,15 +1,19 @@
 function getShuffled(arr){
     //return shuffled arr
-    const len = [...arr]
+    let newArr = [...arr]
     const result = []
     
-    while(len.length > 0){
-        const number = Math.floor(Math.random()*len.length)
-        result.push(len[number])
-        len.splice(number,1)
+    while(newArr.length > 0){
+        const number = Math.floor(Math.random()*newArr.length)
+        result.push(newArr[number])
+        newArr = newArr.filter((part)=> part !==newArr[number])
     }
-  
+
     return result
   }
 
-  export default getShuffled
+export default getShuffled
+
+
+// console.log(getShuffled([0,1,2,3]))
+
