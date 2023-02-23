@@ -2,20 +2,30 @@ import Memory from "./components/memory";
 import Header from "./components/header";
 import arc1 from "./cards/img/arc1";
 import "./App.css"
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import getShuffled from "./shuffle";
 
 function App() {
 
 
-  
+  //Übergeorneten Karten mit denen Gespielt wird
   const [cards,setCards] = useState(arc1())
+
+
+
+  //Karten die noch übrig sind
+  const [leftCards,setLeftCards] = useState([...cards])
+  //Karten die zum spielen sind (und geshuffelt werden)
+  const [activeCards,setActiveCards] = useState([...cards])
+
   const [score,setScore] = useState(0)
   const [highScore,setHighScore] = useState(0)
-  const [leftCards,setLeftCards] = useState([...cards])
+  
 
   
 
   function pickCard(name){
+    setActiveCards(getShuffled(activeCards))
     const relative = [...leftCards]
     for(let i = 0;i<relative.length;i++){
       if(relative[i].name === name){
@@ -25,20 +35,17 @@ function App() {
         return
       }
     }
-
     setScore(0)
     setLeftCards([...cards])
-
-    
-
   }
 
+  
 
 
   return (
   <div>
       <Header score={score} highScore={highScore}/>
-      <Memory cards={cards} cp={pickCard}/>
+      <Memory cards={activeCards} cp={pickCard}/>
   </div>
   );
 }
