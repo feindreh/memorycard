@@ -1,4 +1,4 @@
-import duo from "./duo.jpeg"
+// import duo from "./duo.jpeg"
 import gohan from "./gohan.jpeg"
 import goku from "./goku.jpeg"
 import piccolo from "./piccolo.webp"
