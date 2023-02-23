@@ -14,7 +14,7 @@ const card = (name,logo) => {
 const arc1 = () => {
     const arr = [];
 
-    arr.push(card("Piccolo & Goku",duo))
+    // arr.push(card("Piccolo & Goku",duo))
     arr.push(card("Gohan",gohan))
     arr.push(card("Goku",goku))
     arr.push(card("Piccolo",piccolo))
