@@ -11,22 +11,26 @@ function App() {
   const [cards,setCards] = useState(arc1())
   const [score,setScore] = useState(0)
   const [highScore,setHighScore] = useState(0)
-  const [leftCards,setLeftCards] = useState(cards)
+  const [leftCards,setLeftCards] = useState([...cards])
 
   
 
   function pickCard(name){
     const relative = [...leftCards]
-    relative.forEach((card)=>{
-      if(card.name === name){
-        /*+1 Punkt 
-        vergleiche highscore
-        entferne karte
-        beende function
-        */
+    for(let i = 0;i<relative.length;i++){
+      if(relative[i].name === name){
+        setScore(score+1) 
+        if(highScore <= score){setHighScore(score+1)}
+        setLeftCards(leftCards.filter(card => card.name !== name))
+        return
       }
-    })
-    //reset game
+    }
+
+    setScore(0)
+    setLeftCards([...cards])
+
+    
+
   }
 
 
