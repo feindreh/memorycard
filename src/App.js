@@ -22,17 +22,31 @@ function App() {
   const [activeCards,setActiveCards] = useState([...cards])
   //score
   const [score,setScore] = useState(0)
-
+  const [win,setWin] = useState(false)
   
+
   useEffect(()=>{
     //check for gameover
       const maxScore = cards.length
-      if(maxScore === score){alert("Winner Winner Chicken Dinner")}
+      if(maxScore === score){setWin(true)}
     },[score])
 
+  useEffect(()=>{
+    //load new set of cards
+    setCards(CARDS[stage])
+      },[stage])
     
-    // USEEFFECT wenn stage sich ändern neue karten
-    // wenn karten sich ändern neues?
+  useEffect(()=>{
+    //update alles mit neuem set
+    setLeftCards([...cards])
+    setActiveCards([...cards])
+    setScore(0)
+  },[cards])
+
+    
+     
+    
+   
 
   
 
@@ -50,13 +64,12 @@ function App() {
     setLeftCards([...cards])
   }
 
-  
-
 
   return (
   <div>
       <Header score={score}/>
       <Memory cards={activeCards} cp={pickCard}/>
+      {win?(<button onClick={()=>{setStage(stage + 1);setWin(false)}}>Next Stage</button>):undefined}
   </div>
   );
 }
