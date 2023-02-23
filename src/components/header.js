@@ -5,8 +5,8 @@ function Header(props){
 
     return(
         <div id="header">
-            <div>Get every image one time</div>
-            <div>Score:{score}/{scoreMax}</div>
+            <div id="score">{score}/{scoreMax}</div>
+            <h1>Every Image One Time</h1>
         </div>
     )
 }
