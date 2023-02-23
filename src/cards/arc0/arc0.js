@@ -1,5 +1,5 @@
 import roshi from "./MasterRoshi.webp"
-import krillin from "./krillin.jpeg"
+import krillin from "./Krillin.jpeg"
 import goku from "./Goku.webp"
 
 
