@@ -1,9 +1,10 @@
 function Card(props){
 
     const {name,logo} = props.card
+    const {cardPick} = props
 
     return(
-        <div className="cardWrap">
+        <div className="cardWrap" onClick={()=>{cardPick(name)}}>
             <img className="card" src={logo}></img>
             <div className="description">{name}</div>
         </div>
