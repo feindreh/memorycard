@@ -1,15 +1,19 @@
 import Memory from "./components/memory";
 import Header from "./components/header";
-import arc1 from "./cards/img/arc1";
 import "./App.css"
 import { useEffect, useState } from "react";
 import getShuffled from "./shuffle";
+import CARDS from "./cards/arcBarrel";
 
 function App() {
 
 
+
+ 
   //Übergeorneten Karten mit denen Gespielt wird
-  const [cards,setCards] = useState(arc1())
+  const [stage,setStage] = useState(0)
+  const [cards,setCards] = useState(CARDS[stage])
+  
 
  
   //Karten die noch übrig sind
@@ -25,6 +29,10 @@ function App() {
       const maxScore = cards.length
       if(maxScore === score){alert("Winner Winner Chicken Dinner")}
     },[score])
+
+    
+    // USEEFFECT wenn stage sich ändern neue karten
+    // wenn karten sich ändern neues?
 
   
 
