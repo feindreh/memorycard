@@ -11,8 +11,7 @@ function App() {
   //Übergeorneten Karten mit denen Gespielt wird
   const [cards,setCards] = useState(arc1())
 
-
-
+ 
   //Karten die noch übrig sind
   const [leftCards,setLeftCards] = useState([...cards])
   //Karten die zum spielen sind (und geshuffelt werden)
@@ -21,6 +20,11 @@ function App() {
   const [score,setScore] = useState(0)
   const [highScore,setHighScore] = useState(0)
   
+  useEffect(()=>{
+    //check for gameover
+      const maxScore = cards.length
+      if(maxScore === score){alert("Winner Winner Chicken Dinner")}
+    },[score])
 
   
 
