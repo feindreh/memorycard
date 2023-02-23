@@ -77,10 +77,11 @@ function App() {
   }
 
   return (
-  <div>
-      <Header score={score}/>
-      <Memory cards={activeCards} cp={pickCard}/>
+  <div id="App">
+      <Header score={score} scoreMax={cards.length}/>
       {win?(<button onClick={()=>{setStage(stage + 1);setWin(false)}}>Next Stage</button>):undefined}
+      <Memory cards={activeCards} cp={pickCard}/>
+      
   </div>
   );
 }
