@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/memorycard/static/css/main.e3cab1e0.css",
+    "main.js": "/memorycard/static/js/main.4e4b0764.js",
+    "static/media/piccolo.gif": "/memorycard/static/media/piccolo.8eeb2a3f1cb92392f272.gif",
+    "static/media/vegeta.webp": "/memorycard/static/media/vegeta.84fb6007c55868c4917d.webp",
+    "static/media/gohan.jpeg": "/memorycard/static/media/gohan.e0be3418253ae5cf6343.jpeg",
+    "static/media/nappa.webp": "/memorycard/static/media/nappa.7ea6f83f9956c816b1c1.webp",
+    "static/media/goku.webp": "/memorycard/static/media/goku.afa606d2a9a227a3d69a.webp",
+    "static/media/kaio.webp": "/memorycard/static/media/kaio.836051ee8ca50a37ea3c.webp",
+    "static/media/Goku.webp": "/memorycard/static/media/Goku.6c6ebb4a72382304d24a.webp",
+    "static/media/raditz.webp": "/memorycard/static/media/raditz.d44d4f612b8a653fe148.webp",
+    "static/media/piccolo.webp": "/memorycard/static/media/piccolo.30991ef05dfd11e44610.webp",
+    "static/media/MasterRoshi.webp": "/memorycard/static/media/MasterRoshi.a257099a8ca16aed26f5.webp",
+    "index.html": "/memorycard/index.html",
+    "main.e3cab1e0.css.map": "/memorycard/static/css/main.e3cab1e0.css.map",
+    "main.4e4b0764.js.map": "/memorycard/static/js/main.4e4b0764.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e3cab1e0.css",
+    "static/js/main.4e4b0764.js"
+  ]
+}
