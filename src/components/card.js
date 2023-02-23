@@ -5,7 +5,7 @@ function Card(props){
 
     return(
         <div className="cardWrap" onClick={()=>{cardPick(name)}}>
-            <img className="card" src={logo}></img>
+            <img className="card" alt="" src={logo}></img>
             <div className="description">{name}</div>
         </div>
     )
