@@ -1,6 +1,6 @@
 function Header(props){
 
-    const {score,highScore} = props
+    const {score} = props
 
 
     return(
