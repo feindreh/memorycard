@@ -13,6 +13,7 @@ function App() {
   //Übergeorneten Karten mit denen Gespielt wird
   const [stage,setStage] = useState(0)
   const [cards,setCards] = useState(CARDS[stage])
+  const [won,setWon] = useState(false)
   
 
  
@@ -33,7 +34,11 @@ function App() {
 
   useEffect(()=>{
     //load new set of cards
-    setCards(CARDS[stage])
+    if(CARDS[stage] === undefined){
+      setWon(true)
+    }else{
+      setCards(CARDS[stage])
+    }
       },[stage])
     
   useEffect(()=>{
@@ -64,6 +69,12 @@ function App() {
     setLeftCards([...cards])
   }
 
+
+  if(won){
+    return(
+      <div>Winner Winner</div>
+    )
+  }
 
   return (
   <div>
